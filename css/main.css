@@ -1,0 +1,58 @@
+/* main css */
+
+nav{
+    background-color: #007bff!important;
+}
+a{
+    color: white!important;
+}
+.navbar-text{
+    display: block;
+    padding: .5rem 0.5rem;
+    color: white!important;
+}
+.bottom-button{
+    margin-left: 850px;
+}
+.rest-button{
+    border: 1px solid blue;
+    color: blue;
+}
+.cancel-button{
+    background-color: #fff;
+}
+.submit-button{
+    background-color: white;
+    color: #007bff;
+}
+.main-container-style{
+    border: 2px solid gray;
+    margin-top: 4px;
+}
+
+nav ,button[type="submit"]{
+    background-color: #4682B4 !important;
+    color: white;
+}
+button{
+    color: white !important;
+    width: 120px;
+}
+button[type="reset"]{
+    background-color: #8585ad !important;
+}
+div#census-img{
+    float: right;
+}
+.footer-div{
+    margin-top: 100px;
+    background: #e6e6ff;
+}
+.footer-span{
+    float: right;
+}
+
+.table-header{
+    background-color: #007bff;
+    color:white;
+}

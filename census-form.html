@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">The South West-Regional Census &nbsp;&nbsp;&nbsp;|</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home &nbsp;&nbsp;&nbsp;| </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Census Form</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+        </ul>
+        <span class="form-inline my-2 my-lg-0" id="header-date">
+            Date
+        </span>
+    </div>
+</nav>
+<div class="container main-container-style">
+    <h2>Census Form</h2><br/>
+    <form method="post" id="censusForm">
+        <div class="form-group">
+            <label for="inputFullName">*Full Name</label>
+            <input type="text" class="form-control" id="inputFullName" placeholder="Enter your Full Name"
+                title="Enter Full Name" name="fullName" required>
+            <span>Enter your Full Name as printed on your Government-issued ID</span>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCitizenID">*Citizen ID</label>
+                <input type="text" class="form-control" id="inputCitizenID" placeholder="xxxxxxxxxx"
+                       name="citizenID" title="Enter 10 digit Citizen ID" pattern="\d{10}" required maxlength="10">
+                <span>Enter your 10 digit Citizen-ID</span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputSocialSecurityNumber">*Social Security Number</label>
+                <input type="text" class="form-control" id="inputSocialSecurityNumber" name="socialSecurityNumber"
+                     required placeholder="xxx-xx-xxxx" pattern="\d{3}-\d{2}-\d{4}">
+                <span>Enter your Social Security Number(In the format shown)</span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control" required>
+                    <option value="">Select...</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="New Mexico">New Mexico</option>
+                    <option value="Texas">Texas</option>
+                </select>
+                <span>Select your state of residence</span>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Senior Citizen</label><br/>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="seniorCitizen" id="seniorCitizenYesInput" value="Yes"
+                           required>
+                    <label class="form-check-label" for="seniorCitizenYesInput">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="seniorCitizen" id="seniorCitizenNoInput" value="No">
+                    <label class="form-check-label" for="seniorCitizenNoInput">No</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group bottom-button">
+        <button class="btn btn-light rest-button" type="reset">Reset</button>
+        <button class="btn btn-primary submit-button" type="submit" id="censusSubmitButton">Submit</button>
+        </div>
+
+        <div class="form-group col-md-12">
+            <table class="table table-striped" id="censusTable">
+                <thead>
+                  <tr>
+                      <th>Citizen ID</th>
+                      <th>Social Security</th>
+                      <th>Full Name</th>
+                      <th>State</th>
+                      <th>Senior</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </form>
+
+</div>
+<hr/>
+<footer>
+    <div class="footer-div">
+        <span>O.Kalu:::CS472-WAP</span>
+        <span class="foorer-span">&copy;April 2020</span>
+        <a href="https://validator.w3.org/check/referer">
+            <img alt="HTMLValidator" src="http://mumstudents.org/cs472/2013-09/images/w3c-html.png">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img alt="CSS validator" src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png">
+        </a>
+    </div>
+</footer>
+<script src="js/jquery/jquery-3.5.0.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="js/exam2020.js"></script>
+<script src="js/date.format.js"></script>
+</body>
+</html>
