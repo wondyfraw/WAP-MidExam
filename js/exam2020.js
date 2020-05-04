@@ -72,9 +72,18 @@ jQuery(document).ready(function () {
         //censusTable.innerHTML += tableRow;
     });
 
+
+    /////check box
     jQuery("#showOutPatient").click(function () {
         if($(this).prop("checked") == true){
-
+            let rows = jQuery(this).closest('tr');
+            let columns = rows.find('td');
+            let values = "";
+            $.each(columns, function (i,item) {
+                if(i %5 ==0 && item != "Show Out-Patient Only"){
+                  $(this).remove();
+                }
+            })
         }
     })
 
