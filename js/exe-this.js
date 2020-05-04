@@ -75,7 +75,7 @@ const person4 = {
             console.log(this); ///person4
             this.firstName = newFirstName;
         }
-        changeFirstName.bind(this,["Bob4"]);
+        changeFirstName.apply(this,["Bob4"]);
         console.log("P4 =" +this.firstName);
         return this.firstName;
     }
